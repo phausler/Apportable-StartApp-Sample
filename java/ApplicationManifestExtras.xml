@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- @DAStartApp: Note: replace <package_name> with your package as declared in your manifest in both activities -->
+    <!--
+        <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:taskAffinity="<package_name>.AppWall"
+            android:theme="@android:style/Theme" />
+
+        <activity android:name="com.startapp.android.publish.AppWallActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:taskAffinity="<package_name>.AppWall"
+            android:configChanges="orientation|keyboardHidden" />
+     -->
+    
+    <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+        android:taskAffinity="com.duksel.apportable.StartApp_Sample.AppWall"
+        android:theme="@android:style/Theme" />
+    
+    <activity android:name="com.startapp.android.publish.AppWallActivity"
+        android:theme="@android:style/Theme.Translucent"
+        android:taskAffinity="com.duksel.apportable.StartApp_Sample.AppWall"
+        android:configChanges="orientation|keyboardHidden" />
+
+</manifest>
