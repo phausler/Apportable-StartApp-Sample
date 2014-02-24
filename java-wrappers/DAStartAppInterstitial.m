@@ -8,6 +8,9 @@
 
 #import "DAStartAppInterstitial.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-property-implementation"
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 @implementation DAStartAppInterstitial
 
 @synthesize delegate;
@@ -90,3 +93,4 @@
 }
 
 @end
+#pragma clang diagnostic pop

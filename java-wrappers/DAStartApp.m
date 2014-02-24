@@ -8,6 +8,9 @@
 
 #import "DAStartApp.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-property-implementation"
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 @implementation DAStartApp
 
 + (void)initializeJava
@@ -54,3 +57,4 @@
 }
 
 @end
+#pragma clang diagnostic pop

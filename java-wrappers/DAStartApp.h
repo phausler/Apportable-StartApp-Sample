@@ -16,6 +16,8 @@
 + (DAStartApp*)shared;
 + (DAStartAppInterstitial*)interstitial;
 
+- (id)initInActivity:(AndroidActivity*)activity;
+
 - (void)setDeveloperId:(NSString*)developerId appId:(NSString*)appId;
 
 // @test:show-banner

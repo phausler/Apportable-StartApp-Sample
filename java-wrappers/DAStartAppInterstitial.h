@@ -21,6 +21,8 @@
 
 @property (nonatomic, assign) NSObject <DAStartAppInterstitialDelegate> *delegate;
 
+- (id)initInActivity:(AndroidActivity*)activity;
+
 // @public
 
 - (void)loadAd;
