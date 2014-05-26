@@ -1,0 +1,152 @@
+{
+    "assets": [
+        {
+            "asset": "StartApp-Sample/en.lproj/InfoPlist.strings", 
+            "target": "en.lproj/InfoPlist.strings"
+        }
+    ], 
+    "config": {
+        "APPLICATION_FULL_NAME": "StartApp-Sample", 
+        "APPLICATION_IDENTIFIER": "com.duksel.apportable.StartApp_Sample", 
+        "APPLICATION_NAME": "StartApp-Sample", 
+        "LONG_VERSION": "1.0", 
+        "SHORT_VERSION": "1.0", 
+        "TEMPLATE_VALUES": {
+            "EXECUTABLE_NAME": "StartApp-Sample"
+        }
+    }, 
+    "defines": {
+        "NS_BLOCK_ASSERTIONS": 1, 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 60100
+    }, 
+    "deps": [
+        "UIKit", 
+        "UIKit", 
+        "Foundation", 
+        "CoreGraphics"
+    ], 
+    "flags": [
+        "-DNS_BLOCK_ASSERTIONS=1", 
+        {
+            "flag": "-DNS_BLOCK_ASSERTIONS=1", 
+            "type": "c++"
+        }, 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wno-deprecated-declarations", 
+        "-Wreturn-type", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wuninitialized", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }
+    ], 
+    "header_paths": [
+        {
+            "header_path": "StartApp-Sample-generated-files.hmap", 
+            "hmap": {}, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "StartApp-Sample-own-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "StartApp-Sample-all-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "StartApp-Sample-project-headers.hmap", 
+            "hmap": {
+                "AppDelegate.h": {
+                    "key": "AppDelegate.h", 
+                    "prefix": "StartApp-Sample/", 
+                    "suffix": "AppDelegate.h"
+                }, 
+                "DAStartApp.h": {
+                    "key": "DAStartApp.h", 
+                    "prefix": "java-wrappers/", 
+                    "suffix": "DAStartApp.h"
+                }, 
+                "DAStartAppInterstitial.h": {
+                    "key": "DAStartAppInterstitial.h", 
+                    "prefix": "java-wrappers/", 
+                    "suffix": "DAStartAppInterstitial.h"
+                }, 
+                "StartApp-Sample-Prefix.pch": {
+                    "key": "StartApp-Sample-Prefix.pch", 
+                    "prefix": "StartApp-Sample/", 
+                    "suffix": "StartApp-Sample-Prefix.pch"
+                }
+            }, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "/var/folders/0f/7l715xts7457tkstmr3lm5m80000gn/T/tmpU51XWe/BUILT_PRODUCTS_DIR/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/Applications/Xcode5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/0f/7l715xts7457tkstmr3lm5m80000gn/T/tmpU51XWe/DERIVED_FILE_DIR/armv7", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/0f/7l715xts7457tkstmr3lm5m80000gn/T/tmpU51XWe/DERIVED_FILE_DIR", 
+            "type": "I"
+        }
+    ], 
+    "infoplists": [
+        "./StartApp-Sample/StartApp-Sample-Info.plist"
+    ], 
+    "libs": [], 
+    "modules": [], 
+    "pchs": [
+        "./StartApp-Sample/StartApp-Sample-Prefix.pch"
+    ], 
+    "sources": [
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "StartApp-Sample/AppDelegate.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "StartApp-Sample/main.m"
+        }
+    ], 
+    "storyboards": [], 
+    "type": "app", 
+    "version": "3", 
+    "xcdatamodels": [], 
+    "xcode_project": "StartApp-Sample.xcodeproj", 
+    "xibs": []
+}
