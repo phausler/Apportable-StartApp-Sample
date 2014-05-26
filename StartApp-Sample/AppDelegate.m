@@ -12,7 +12,9 @@
 #import "DAStartApp.h"
 #endif
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    BOOL showing_ad;
+}
 
 - (void)dealloc
 {
@@ -39,19 +41,58 @@
 }
 
 #ifdef ANDROID
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    showing_ad = NO;
+}
+
+#if ALERT_DIALOG_EXIT
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != alertView.cancelButtonIndex)
+    {
+        exit(0);
+    }
+}
+#endif
+
 - (void)buttonUpWithEvent:(UIEvent *)event
 {
     switch (event.buttonCode)
     {
         case UIEventButtonCodeBack:
             // @DAStartApp
-            [[DAStartApp interstitial] showAd];
-            exit(0);
+            // tracking the state and gating ads is preferable
+            // so that when you suspend/resume, the app can
+            // remain active and gate accordingly for registration
+            // however using the back button to show advertizements
+            // is not suggested since the expected behavior 
+            // perscribed by Google (used in their process to feature
+            // apps for Google Play) is to exit (possibly with an alert
+            // that confirms the behavior)
+#if ALERT_DIALOG_EXIT
+            UIAlertView *exitDialog = [[UIAlertView alloc] initWithTitle:@"Exit" 
+                                                                 message:@"Are you sure you want to exit?" 
+                                                                delegate:self 
+                                                       cancelButtonTitle:@"NO"
+                                                       otherButtonTitles:@"YES", nil];
+            [exitDialog show];
             break;
+#else
+            if (!showing_ad) {
+                showing_ad = YES;
+                [[DAStartApp interstitial] showAd];
+            }
+            break;
+#endif
 
         case UIEventButtonCodeMenu:
             // @DAStartApp
-            [[DAStartApp interstitial] showAdAndLoadNextAd];
+            if (!showing_ad) {
+                showing_ad = YES;
+                [[DAStartApp interstitial] showAdAndLoadNextAd];
+            }
             break;
 
         default:
