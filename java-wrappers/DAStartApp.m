@@ -18,7 +18,7 @@
     [super initializeJava];
     
     [DAStartApp registerConstructorWithSelector:@selector(initInActivity:)
-                                      arguments:@"android/app/Activity", nil];
+                                      arguments:[AndroidActivity className], nil];
     
     [DAStartApp registerInstanceMethod:@"setDeveloperIdAndAppId"
                               selector:@selector(setDeveloperId:appId:)

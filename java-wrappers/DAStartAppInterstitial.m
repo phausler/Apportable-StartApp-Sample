@@ -20,7 +20,7 @@
     [super initializeJava];
     
     [DAStartAppInterstitial registerConstructorWithSelector:@selector(initInActivity:)
-                                                  arguments:@"android/app/Activity", nil];
+                                                  arguments:[AndroidActivity className], nil];
     
     [DAStartAppInterstitial registerInstanceMethod:@"loadAd"
                                           selector:@selector(loadAd)];
